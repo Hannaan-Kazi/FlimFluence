@@ -1,0 +1,81 @@
+<div class="mov">
+
+    <div class="preview">
+        <mat-card class="example-preview">
+            <img
+            mat-card-image
+            [src]="movieFromDb?.image"
+            [alt]="movieFromDb?.title"
+            />
+            <mat-card-header>
+                <!-- <div mat-card-avatar class="example-header-image"></div> -->
+                
+                <mat-card-title
+                >{{ movieFromDb?.title }}<br>
+                <ngb-rating
+                [max]="5"
+                [rate]="movieFromDb?.ratings"
+                [readonly]="true"
+                ></ngb-rating>
+            </mat-card-title>
+            <mat-card-subtitle>{{ movieFromDb?.genre }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>
+                {{ movieFromDb?.summary }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="OnWatchClick(movieFromDb.movieId)">Play</button>
+        <button mat-button>Watch Later</button>
+        <button mat-raised-button (click)="updateMovie(movieFromDb.movieId)" *ngIf="authz">Edit</button>
+        <button mat-raised-button (click)="delMovie(movieFromDb.movieId)" *ngIf="authz">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<br />
+<br />
+<br />
+<div class="Ratings">
+    <div class="mat-elevation-z8" style="left: 50%">
+        <button mat-raised-button color="warn" (click)="openDialog()">Add Rating</button>
+        <table mat-table [dataSource]="dataSource">
+      <!-- <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container> -->
+        
+        <ng-container matColumnDef="comment">
+            <th mat-header-cell *matHeaderCellDef>Comment</th>
+            <td mat-cell *matCellDef="let element">{{ element.comment }}</td>
+        </ng-container>
+        
+        <ng-container matColumnDef="rating">
+            <th mat-header-cell *matHeaderCellDef>Ratings</th>
+            <td mat-cell *matCellDef="let element">
+                <ngb-rating
+                [max]="5"
+                [rate]="element.rating"
+                [readonly]="true"
+                ></ngb-rating>
+            </td>
+        </ng-container>
+        
+        <!-- <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> Symbol </th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        </ng-container> -->
+        
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <mat-paginator
+    [pageSizeOptions]="[1, 10, 20]"
+    showFirstLastButtons
+    aria-label="Paginator"
+    >
+</mat-paginator>
+</div>
+</div>
+
+</div>

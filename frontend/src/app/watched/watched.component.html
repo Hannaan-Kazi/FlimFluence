@@ -1,0 +1,68 @@
+<div *ngIf="dataSourc != null || dataSourc != undefined" class="Ratings">
+    <div class="mat-elevation-z8" style="left: 50%">
+      <table mat-table [dataSource]="dataSourc">
+        <!-- <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container> -->
+  
+        <ng-container matColumnDef="posterUrl">
+          <th mat-header-cell *matHeaderCellDef>Image</th>
+          <td mat-cell *matCellDef="let element">
+            <!-- <mat-card >
+          </mat-card> -->
+            <img
+              style="height: 120px; width: 270px"
+              mat-card-image
+              [src]="element.posterUrl"
+              (click)="onCardClick(element.movieId)"
+            />
+            <!-- {{ element.posterUrl }} -->
+          </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef>details</th>
+          <td mat-cell *matCellDef="let element">
+            <strong>
+              {{ element.title }}
+            </strong>
+            <br />
+            <ngb-rating
+              [max]="5"
+              style="color: gold"
+              [rate]="element.ratings"
+              [readonly]="true"
+            ></ngb-rating
+            ><br />
+            {{ element.genre }}<br />
+            {{ element.summary }}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="operate">
+          <th mat-header-cell *matHeaderCellDef>Edit</th>
+          <td mat-cell *matCellDef="let element">
+            <!-- <mat-button-icon>delete</mat-button-icon> -->
+            <button mat-fab color="warn" (click)="onDeleteClick(element.movieId)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+  
+        <!-- <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Symbol </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+          </ng-container> -->
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumn"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumn"></tr>
+      </table>
+      <mat-paginator
+        [pageSizeOptions]="[1, 10, 20]"
+        showFirstLastButtons
+        aria-label="Paginator"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+  

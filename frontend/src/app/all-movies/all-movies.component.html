@@ -1,0 +1,123 @@
+All movies test
+<div *ngIf="dataSource != null || dataSource != undefined" class="Ratings">
+    <div class="mat-elevation-z8" style="left: 50%; ">
+        <div class="op-div" style="display: flex; justify-content: center;">
+
+            <div class="operations" >
+                <mat-form-field class="no_btm_space" >
+                    <mat-label>Filter</mat-label>
+                    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Naruto" #input>
+                </mat-form-field>
+                
+                <mat-paginator [pageSizeOptions]="[3,5, 10, 25]" aria-label="Select page of movies"></mat-paginator>
+
+                <mat-form-field class="no_btm_space" appearance="outline" >
+                    <mat-label>Sort By</mat-label>
+                    <mat-select (selectionChange)="sortData($event)" panelClass="example-panel-red" class="example-panel-red" >
+                        <mat-option value="name_asc">Title (Asc)</mat-option>
+                        <mat-option value="name_desc">Title (Desc)</mat-option>
+                        <mat-option value="rating_desc">Highest Rated</mat-option>
+                        <mat-option value="rating_asc">Lowest Rated</mat-option>
+                        <mat-option value="releaseDate_desc">Latest</mat-option>
+                        <mat-option value="releaseDate_asc">Oldest</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+
+
+
+
+
+
+                <!-- <mat-form-field>
+                    <mat-label>Panel color</mat-label>
+                    <mat-select
+                                panelClass="example-panel-{{panelColor.value}}">
+                      <mat-option value="red">Red</mat-option>
+                      <mat-option value="green">Green</mat-option>
+                      <mat-option value="blue">Blue</mat-option>
+                    </mat-select>
+                  </mat-form-field> -->
+                <!-- <select (change)="sortData($event)">
+                <option value="name_asc">Title (Asc)</option>
+                <option value="name_desc">Title (DSc)</option>
+                </select> -->
+            </div>
+    </div>
+
+      <table mat-table [dataSource]="dataSource" matSort >
+        <!-- <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container> -->
+  
+        <ng-container Mat matColumnDef="posterUrl" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>
+          <td mat-cell *matCellDef="let element" class="mat-column-name" style="width:300px">
+            <!-- <mat-card >
+          </mat-card> -->
+            <img
+              style="height: 120px; width: 270px ;margin: 10px 0px;
+              border: 1px solid red;"
+              mat-card-image
+              [src]="element.posterUrl?element.posterUrl:''"
+              (click)="onCardClick(element.movieId)"
+            />
+            <!-- {{ element.posterUrl }} -->
+          </td>
+        </ng-container>
+  
+        <ng-container matColumnDef="title" >
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Details</th>
+          <td mat-cell *matCellDef="let element" >
+            <strong>
+              {{ element.title }}
+            </strong>
+            ({{ formatDate(element.releaseDate) }})<br>
+            <ngb-rating
+              [max]="5"
+              style="color: gold"
+              [rate]="element.ratings"
+              [readonly]="true"
+            ></ngb-rating
+            ><br />
+            {{ element.genre }}<br />
+            {{ element.summary }}
+          </td>
+        </ng-container>
+        <ng-container >
+            <ng-container matColumnDef="operate">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header >Edit</th>
+                <td mat-cell *matCellDef="let element" >
+                    <div style="display: flex; justify-content: space-evenly; align-items: center;">
+
+                        <!-- <mat-button-icon>delete</mat-button-icon> -->
+                        <button mat-mini-fab color="accent" (click)="updateMovie(element.movieId)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-mini-fab color="warn" (click)="onDeleteClick(element.movieId)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </div>
+                    </td>
+            </ng-container>
+        </ng-container>
+  
+        <!-- <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Symbol </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+          </ng-container> -->
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumn"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumn"></tr>
+      </table>
+
+      <!-- <mat-paginator
+        [pageSizeOptions]="[1, 10, 20]"
+        showFirstLastButtons
+        aria-label="Paginator"
+      >
+      </mat-paginator> -->
+    </div>
+  </div>
+  

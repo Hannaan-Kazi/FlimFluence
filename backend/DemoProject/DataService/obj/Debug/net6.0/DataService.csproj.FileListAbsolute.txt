@@ -1,0 +1,14 @@
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\bin\Debug\net6.0\DataService.deps.json
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\bin\Debug\net6.0\DataService.runtimeconfig.json
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\bin\Debug\net6.0\DataService.dll
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\bin\Debug\net6.0\DataService.pdb
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\obj\Debug\net6.0\DataService.csproj.AssemblyReference.cache
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\obj\Debug\net6.0\DataService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\obj\Debug\net6.0\DataService.AssemblyInfoInputs.cache
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\obj\Debug\net6.0\DataService.AssemblyInfo.cs
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\obj\Debug\net6.0\DataService.csproj.CoreCompileInputs.cache
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\obj\Debug\net6.0\DataService.dll
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\obj\Debug\net6.0\refint\DataService.dll
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\obj\Debug\net6.0\DataService.pdb
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\obj\Debug\net6.0\DataService.genruntimeconfig.cache
+C:\Users\Hannaan Kazi\source\repos\DemoProject\DataService\obj\Debug\net6.0\ref\DataService.dll

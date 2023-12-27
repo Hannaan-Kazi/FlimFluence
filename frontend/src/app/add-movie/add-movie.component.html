@@ -1,0 +1,116 @@
+<div
+  class="sUp"
+  style="display: flex; justify-content: space-around; background: transparent"
+>
+  <form [formGroup]="form" class="form">
+    <div class="fields">
+      <div class="top">
+        <!-- <h2 mat-dialog-title align="centre" style="color:red; 
+    justify-content: center;
+    display: flex; padding-bottom: 0%;
+    ">Movie Details</h2> -->
+
+        <p class="title" style="color: red; font-weight: bolder">
+          {{ isUpdating ? "Update Movie" : "Add Movie" }}
+        </p>
+      </div>
+
+      <div class="flex">
+        <label>
+          <input class="input" type="text" formControlName="title" />
+          <span>Title</span>
+        </label>
+
+        <label>
+          <input class="input" type="date" formControlName="releaseDate" />
+          <span>Date of Release</span>
+        </label>
+      </div>
+      <br />
+      <!-- <label for="title">Title:</label>
+      <input matInput type="text" id="title" formControlName="title" /><br>
+
+      <label for="releaseDate">Release Date:</label>
+      <input matInput color="primary" type="date" id="releaseDate" formControlName="releaseDate" /><br> -->
+      <div class="the3" style="display: grid">
+        <label>
+          <input class="input" type="text" formControlName="genre" />
+          <span>Genre:</span>
+        </label>
+        <br />
+        <label>
+          <input class="input" type="text" formControlName="posterUrl" />
+          <!-- <textarea  id="summary" formControlName="summary"></textarea> -->
+          <span>Poster Url</span>
+        </label>
+        <br />
+        <label>
+          <input class="input" type="text" formControlName="summary" />
+          <!-- <textarea  id="summary" formControlName="summary"></textarea> -->
+          <span>Summary</span>
+        </label>
+      </div>
+      <!-- <label for="genre">Genre:</label>
+      <input matInput type="text" id="genre" formControlName="genre" /><br>
+
+      <label for="summary">Summary:</label>
+      <textarea  id="summary" formControlName="summary"></textarea><br> -->
+
+      <!-- <label for="summary">Poster:</label>
+      <textarea  id="posterUrl" formControlName="posterUrl"></textarea><br> -->
+
+      <!-- <input  type="file" id="pic" formControlName="pic" accept="image/*" /><br> -->
+
+      <!-- <input type="file" class="file-upload" onchange="console.log(event.target.files)">-->
+
+      <label for="pic" style="color: red; font-weight: bolder">Picture:</label>
+      <div
+        class="image-preview-container"
+        [ngClass]="{ 'has-preview': onload != null }"
+      >
+        <input
+          type="file"
+          class="file-input"
+          id="image"
+          (change)="onImgSelected($event, 'Image')"
+          #fileUpload
+          *ngIf="!remove"
+          formControlName="image"
+        />
+        <img *ngIf="onload != null" [src]="onload" />
+      </div>
+      <!-- <div *ngIf="onload" class="image-preview">
+        <img [src]="onload" alt="Selected Image">
+      </div> -->
+      <!-- <img style="height: 200px;" [src]="onload" alt="preview"><br> -->
+      <!-- <button (click)="removePreview()" type="button" *ngIf="remove">
+        remove
+      </button> -->
+
+      <div class="btm-btns">
+        <!-- <div class="file-upload">
+          
+          {{fileName || "No file uploaded yet."}}
+          
+          <button mat-mini-fab color="primary" class="upload-btn"
+          (click)="fileUpload.click()">
+          <mat-icon>attach_file</mat-icon>
+        </button>
+      </div> -->
+        <a class="remove" (click)="removePreview()" *ngIf="remove">
+          remove
+          <span class="color-gray"></span>
+        </a>
+        <a mat-dialog-close class="cancel">
+          Cancel
+          <span class="color-red"></span>
+        </a>
+        <a type="submit" class="submi" (click)="onSubmit()">
+          submit
+          <span class="color-blue"></span>
+        </a>
+        <!-- <button type="submit" mat-dialog-close>Submit</button><br /> -->
+      </div>
+    </div>
+  </form>
+</div>

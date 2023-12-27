@@ -1,0 +1,12 @@
+::ng-deep .mat-mdc-table, .mat-mdc-header-cell {
+    background: inherit;
+    background-color: black !important;
+    color: red !important;
+}
+
+::ng-deep .mat-mdc-cell{
+    border-bottom-color: white !important;
+
+    color: white !important;
+
+}

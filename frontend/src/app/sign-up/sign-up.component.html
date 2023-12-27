@@ -1,0 +1,153 @@
+<!-- <mat-form-field appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input matInput class="input" formControlName="firstName" placeholder="1st Name"required>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input class="input" formControlName="lastName" placeholder="last Name"required>
+
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input class="input" formControlName="email" placeholder="email"required>
+
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input class="input" type="password" formControlName="password" placeholder="password"required>
+
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Date of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dateOfBirth" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>   
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Phone Number</mat-label>
+      <input class="input" formControlName="phoneNumber" placeholder="phoneNumber"required>
+
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Picture URL</mat-label>
+      <input class="input" formControlName="pictureUrl" placeholder="pictureUrl"required>
+    </mat-form-field> -->
+
+
+<!-- --------------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- <h2 mat-dialog-title align="centre" style="color:red; 
+justify-content: center;
+display: flex; padding-bottom: 0%;
+">Sign Up</h2>
+
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  
+    <mat-form-field appearance="fill">
+      <mat-label>First Name</mat-label>
+      <input matInput formControlName="firstName" required>
+    </mat-form-field>
+
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Last Name</mat-label>
+      <input matInput formControlName="lastName" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email" required>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" required>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Date of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dateOfBirth" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    
+    
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Phone Number</mat-label>
+      <input matInput formControlName="phoneNumber" required>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Picture URL</mat-label>
+      <input matInput type="url" formControlName="pictureUrl">
+    </mat-form-field>
+
+
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" type="submit">Register</button>
+  </form> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="sUp" style="display:flex;
+justify-content: space-around; background: transparent;">
+
+  
+  <form class="form" [formGroup]="registrationForm">
+    <div class="top">
+      <p class="title">Register </p>
+      <span class="close-button" mat-dialog-close>x</span>
+    </div>
+    <!-- <p class="message">Signup now and get full access to our app. </p> -->
+    <div class="flex">
+      <label>
+        <input class="input" type="text" placeholder="" required="" formControlName="firstName">
+        <span>Firstname</span>
+      </label>
+      
+      <label>
+        <input class="input" type="text" placeholder="" required="" formControlName="lastName">
+        <span>Lastname</span>
+        </label>
+    </div>  
+            
+    <label>
+        <input class="input" type="email" placeholder="" required="" formControlName="email">
+        <span>Email</span>
+      </label> 
+      
+      <label>
+        <input class="input" type="password" placeholder="" required="" formControlName="password">
+        <span>Password</span>
+      </label>
+      <label>
+        <input class="input" type="number" placeholder="" required="" formControlName="phoneNumber">
+        <span>Contact</span>
+      </label>
+      <label>
+        <input class="input" type="date" placeholder="" required="" formControlName="dateOfBirth">
+        <span>Date of Birth</span>
+      </label>
+      <a type="submit" (click)="onSubmit()" class="submi" >
+        submit
+        <span class="color-blue"></span>
+      </a>  
+      <p class="signin">Already have an acount ? <a mat-dialog-close (click)="openDialog()"  >Signin</a> </p>
+</form>
+    </div>

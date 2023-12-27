@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-mdc-form-field-infix{
+    min-height: fit-content ;
+    
+    /* padding: 7px !important; */
+    border-radius: 50px !important;
+
+}
+.mat-mdc-text-field-wrapper{
+    border-radius: 50px;
+}
+#custom-form-field > div.mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c1205077789-0.mdc-text-field--filled.mdc-text-field--no-label{
+    border-radius: 50px;
+
+}
+/*
+
+#custom-form-field .mat-mdc-form-field-subscript-wrapper {
+   
+    width: 0;
+    position: relative;
+    height: 0;
+    
+}
+
+
+
+/* .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper {
+    border-radius:25%
+} */
+
+
+/* 
+
+.red-snackbar .mat-mdc-snack-bar-actions mdc-snackbar__actions ng-star-inserted{
+background-color: black !important;
+color: #F44336 !important;
+}*/
+.red-snackbar {
+    background: #F44336;
+    background-color: #F44336;
+    color: white;
+}
+
+.red-snackbar button {
+    background-color: #F44336;
+    color: white !important;
+    border: none;
+} 

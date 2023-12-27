@@ -1,0 +1,128 @@
+<div class="recommend-row">
+  <div class="recommend">
+    <mat-card class="upper">
+      <mat-card-content>You might like...</mat-card-content>
+    </mat-card>
+    <div class="row1Container">
+      <div class="row1" *ngFor="let movie of fromDb" >
+        <mat-card class="example-card">
+          <img mat-card-image [src]="movie.posterUrl" [alt]="movie.title" (click)="onCardClick(movie.movieId)" />
+          <mat-card-header>
+            <mat-card-title>{{ movie.title }}</mat-card-title>
+            <mat-card-subtitle id="mat-card-subtitle" style="color: white">{{
+              movie.genre
+            }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-actions
+            style="display: flex; justify-content: space-between"
+          >
+            <button mat-raised-button color="warn">
+              <mat-icon style="color: gold">star</mat-icon>{{ movie.ratings }}
+            </button>
+            <button mat-raised-button color="warn" (click)="OnSaveClick(movie.movieId)">
+              <mat-icon>bookmark_border</mat-icon>Save
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <!-- <mat-card class="example-card">
+      <img mat-card-image src="assets/images/naruto.jpg" alt="Shipudden" />
+      <mat-card-header>
+        <mat-card-title>Naruto</mat-card-title>
+        <mat-card-subtitle style="color: white">Genre</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions style="display: flex; justify-content: space-between">
+        <button mat-raised-button color="warn">
+          <mat-icon style="color: gold">star</mat-icon>Rating
+        </button>
+        <button mat-raised-button color="warn">
+          <mat-icon>bookmark_border</mat-icon>Save
+        </button>
+      </mat-card-actions>
+    </mat-card> -->
+
+    <div style="display: flex; justify-content: space-between">
+      <!-- <mat-card class="example-card">
+        <img mat-card-image src="assets/images/naruto.jpg" alt="Shipudden" />
+        <mat-card-header>
+          <mat-card-title>Naruto</mat-card-title>
+          <mat-card-subtitle>
+            <ngb-rating
+              [max]="5"
+              [(rate)]="current"
+              [readonly]="true"
+            ></ngb-rating
+            ><br />
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions style="display: flex; justify-content: space-between">
+          <button mat-raised-button color="warn" [disableRipple]="true">
+            <mat-icon>play_arrow</mat-icon>Watch
+          </button>
+          <button mat-raised-button color="warn">
+            <mat-icon>bookmark_border</mat-icon>Save
+          </button>
+        </mat-card-actions>
+      </mat-card> -->
+
+      <!-- <mat-card class="example-card">
+        <img mat-card-image src="assets/images/naruto.jpg" alt="Shipudden" />
+        <div>
+          <div class="card-header">
+            <p>Naruto</p>
+            <p>Genre</p>
+          </div>
+          <ngb-rating
+            [max]="5"
+            [(rate)]="current"
+            [readonly]="true"
+          ></ngb-rating>
+        </div>
+
+        <mat-card-actions style="display: flex; justify-content: space-between">
+          <button mat-raised-button color="warn" [disableRipple]="true">
+            <mat-icon>play_arrow</mat-icon>Watch
+          </button>
+          <button mat-raised-button color="warn">
+            <mat-icon>bookmark_border</mat-icon>Save
+          </button>
+        </mat-card-actions>
+      </mat-card> -->
+    </div>
+  </div>
+  <br />
+  <div class="trending">
+    <mat-card class="upper">
+      <mat-card-content>Trending</mat-card-content>
+    </mat-card>
+    <div class="trending-container" *ngFor="let movie of trend">
+      <mat-card class="trending-example-card">
+        <img mat-card-image [src]="movie.posterUrl" alt="Shipudden" (click)="onCardClick(movie.movieId)" />
+        <div class="trending-row-1">
+          <div class="card-header">
+            <p style="font-size: larger;">{{ movie.title }}</p>
+            <p style="font-size: medium;">{{ movie.genre }}</p>
+          </div>
+          <ngb-rating [max]="5" [(rate)]="current" [readonly]="true"
+            >Rated</ngb-rating
+          >
+          <p>{{ movie.summary }}</p>
+        </div>
+
+        <mat-card-actions style="display: flex; justify-content: space-between">
+          <button mat-raised-button color="warn" [disableRipple]="true" (click)="onCardClick(movie.movieId)">
+            <mat-icon>play_arrow</mat-icon>Watch
+          </button>
+          <button mat-raised-button color="warn" (click)="OnSaveClick(movie.movieId)">
+            <mat-icon >bookmark_border</mat-icon>Save
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<br />
+<br />
+<br />
+<br />

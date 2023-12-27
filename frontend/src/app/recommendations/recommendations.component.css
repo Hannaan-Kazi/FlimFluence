@@ -1,0 +1,136 @@
+mat-grid-tile {
+    background: lightblue;
+}
+
+.example-card {
+    max-width: 220px;
+    margin-top: 25px;
+    object-fit:scale-down;
+    
+}
+
+.example-card mat-card-title{
+    font-size: large;
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+/* .row1{
+    display: inline-block;
+    margin: 10px;    
+    justify-content: space-evenly;
+}  */
+
+.row1Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.row1{
+    /* flex: 1
+     */
+     flex: 0 0 calc(33.33% - 10px); /* Adjust margin as needed */
+      margin-bottom: 10px;
+}
+
+mat-card-header {
+    background: none;
+}
+
+.recommend-row{
+    display: flex;
+    padding: 0 2em;
+    /* flex-direction: row; */
+    /* display: inline-block; */
+    /* justify-content: space-between */
+}
+.recommend{
+    /* margin-left: 40px; */
+    border-right: solid;
+    border-right:red ;
+    min-width: 60%;
+}
+.trending{
+    /* display: inline-block; */
+    padding-left: 20px;
+    width: 100%;
+    flex:1
+}
+
+
+
+mat-card{
+    background-color: #070720;
+    color: aliceblue;
+
+}
+
+mat-card-content{
+    color:red;
+    font-size: large;
+    /* border-radius: 25px; */
+  
+}
+
+.upper{
+    border-left-width: solid;
+    border-left: red;
+    /* display: inline-block; */
+    width: 100%;
+}
+
+ngb-rating {
+    font-size: 15px;
+    color:#FFC107;
+    /* background: red; */
+}
+mat-icon{
+    color:#FFC107;
+
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* font-size: large; */
+}
+
+.card-header p{
+    margin: 0;
+}
+
+.card-header:first-child(p) {
+    font-size: 1.2em;
+}
+
+.trending{
+    display: inline-block;
+}
+
+.trending-container{
+    display: flex;
+    justify-content: center;
+}
+
+.trending-example-card {
+    max-width: 420px;
+    margin-top: 25px;
+    object-fit:scale-down;
+    
+}
+
+.upper mat-card-content{
+    border-left: solid;
+    /* border-bottom: solid; */
+}
+
+/* #mat-card-subtitle{
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+} */

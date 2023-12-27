@@ -1,0 +1,17 @@
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\bin\Debug\net6.0\Managers.deps.json
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\bin\Debug\net6.0\Managers.runtimeconfig.json
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\bin\Debug\net6.0\Managers.dll
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\bin\Debug\net6.0\Managers.pdb
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\bin\Debug\net6.0\DataService.dll
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\bin\Debug\net6.0\DataService.pdb
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\obj\Debug\net6.0\Managers.csproj.AssemblyReference.cache
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\obj\Debug\net6.0\Managers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\obj\Debug\net6.0\Managers.AssemblyInfoInputs.cache
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\obj\Debug\net6.0\Managers.AssemblyInfo.cs
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\obj\Debug\net6.0\Managers.csproj.CoreCompileInputs.cache
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\obj\Debug\net6.0\Managers.csproj.CopyComplete
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\obj\Debug\net6.0\Managers.dll
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\obj\Debug\net6.0\refint\Managers.dll
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\obj\Debug\net6.0\Managers.pdb
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\obj\Debug\net6.0\Managers.genruntimeconfig.cache
+C:\Users\Hannaan Kazi\source\repos\DemoProject\Managers\obj\Debug\net6.0\ref\Managers.dll

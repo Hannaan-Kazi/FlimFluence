@@ -1,0 +1,93 @@
+<!-- <h2 mat-dialog-title align="centre" style="color:red; 
+    justify-content: center;
+    display: flex; padding-bottom: 0%;
+    ">Login</h2> -->
+
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" > -->
+<!-- <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="Email" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" formControlName="Password" required />
+  </mat-form-field>
+  
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close (click)="OpenSignUpDialog()">Create an account</button>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    >
+    Login
+  </button>
+</mat-dialog-actions> -->
+<!-- <span>{{this.loginForm.value | json}}</span> -->
+
+<div class="login-box">
+  <h2
+    mat-dialog-title
+    align="centre"
+    style="
+      color: red;
+      justify-content: center;
+      display: flex;
+      padding-bottom: 10%;
+      font-weight: bolder;
+      font-size: xx-large;
+      font-family: -webkit-body;
+    "
+  >
+    LOGIN
+  </h2>
+  <!-- <p class="err" style="color: crimson;
+  font-size: smaller; position:absolute">{{loginError ? loginError :"" }}</p> -->
+  <form [formGroup]="loginForm" autocomplete="off">
+    <div class="user-box userNameDiv">
+      <input type="text" name="Email" formControlName="Email" required    style="position: relative;margin: 0;" />
+      <label>Username</label>
+
+      <div
+      style="color: crimson;
+      font-size: small; margin: 0.5em 0;" [ngStyle]="{'visibility': loginForm.get('Email').hasError('email') &&
+          loginForm.get('Email').touched?'visible':'hidden'}">
+        Please enter a valid email address.
+      </div>
+      <!-- <div *ngIf="loginForm.errors?.['email']"> Enter a valid email.</div> -->
+    </div>
+    <div class="user-box">
+      <input
+        type="password"
+        formControlName="Password"
+        name="Password"
+        required
+      />
+      <p
+        class="err"
+        style="color: crimson; font-size: smaller; position: absolute" class="error-message"
+      >
+        {{ passError ? passError : " " }}
+      </p>
+      <label>Password</label>
+    </div>
+    <div class="action">
+      <a mat-dialog-close class="cancel">
+        Cancel
+        <span class="color-red"></span>
+      </a>
+      <a class="create" mat-dialog-close (click)="OpenSignUpDialog()">
+        Create
+        <span class="color-blue"></span>
+      </a>
+      <a type="submit" (click)="onSubmit()">
+        submit
+        <span></span>
+      </a>
+    </div>
+  </form>
+</div>
+
+<!-- </form> -->

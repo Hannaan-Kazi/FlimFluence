@@ -1,0 +1,61 @@
+.carousel-image-container {
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    right: 85%;
+    transform: translateX(-50%);
+    text-align: left;
+    color: #fff;
+    white-space: nowrap;
+
+}
+ngb-carousel img {
+    max-height: 400px;
+    min-height: 250px;
+    width: 80%;
+    /* object-fit: cover; */
+    display: block;
+    margin: 0 auto;
+}
+
+ngb-carousel {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%; Set the height of the carousel container */
+}
+
+ngb-rating {
+    font-size: 15px;
+    color:#FFC107;
+    /* background: red; */
+}
+
+.carousel-caption .genre{
+    background-color: black;
+    color: #FFC107;
+    margin: 0;   
+}
+/* .genre{
+    background-color: black;
+    color: #FFC107;
+    margin: 0;   
+} */
+
+#Summary{
+    color: white;
+    margin-bottom: 0;  
+    font-size: smaller;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+#genre{
+    /* background-color: black; */
+    color: #FFC107;
+    margin-bottom: 0;
+}

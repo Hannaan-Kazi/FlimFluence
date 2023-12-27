@@ -1,0 +1,102 @@
+<div class="rating-body">
+
+    <h2 mat-dialog-title style="
+        color: red;
+    align-items: flex-end;
+    justify-content: center;
+    display: flex;
+    font-weight: bolder;
+    font-size: xx-large;
+    font-family: -webkit-body;
+    background: #070720;
+  ">Add your Rating</h2>
+    <form [formGroup]="ratingFor" (ngSubmit)="OnSubmit()">
+        <!-- <mat-form-field> -->
+            <!-- <mat-label>Click on stars</mat-label>
+                <ngb-rating style="color:gold;" [max]="5" [(rate)]="star" name="name" formControlName="rating1" required>Rate</ngb-rating> -->
+                <div class="star-div">
+                    
+                    <label for="ratin">
+                        
+                        <ngb-rating class="stars" style="color:gold; display:inline, " formControlName="ratin" [(rate)]="star" [max]="5"></ngb-rating>
+                    </label>
+                    <!-- <div *ngIf="ratingFor.get('ratin').hasError('min')">
+                        Rating is required.
+                    </div> -->
+
+                    <div *ngIf="ratingFor.errors?.['min']">
+                        Name must be at least 4 characters long.
+                    </div>
+                </div>
+                <div *ngIf="false" class="alert alert-warning">
+                    Please provide a rating before submitting.
+                  </div>
+
+                <!-- <ng-container 
+  *ngIf="star!=0; then rated; else notRated">
+</ng-container> -->
+
+<div *ngIf="star!=0;" style="color: beige; display: flex;
+justify-content: center;">
+  you are rating it {{star}} out of 5
+<span></span>
+  <mat-icon (click)="star=0">delete_outline</mat-icon>
+  <!-- <button (click)="star=0">Clear</button> -->
+</div>
+
+<div *ngIf="star==0 && !this.submitClicked;" style="color: rgba(255, 255, 255, 0.981)  ;display: flex;
+justify-content: center;">
+  Click on the stars to rate
+</div>
+
+<div *ngIf="star==0&&this.submitClicked" style="color: rgba(255, 255, 255, 0.981)  ;display: flex;
+justify-content: center;">
+  Please select a rating before submitting.
+</div>
+
+
+
+                <!-- <p *ngIf="star!=0" style=" display:inline">you are rating it {{star}} out of 5</p><br> -->
+                
+                
+<!-- </mat-form-field> -->
+<!-- <mat-form-field>
+    <mat-label>Share your thoughts</mat-label>
+</mat-form-field> -->
+<div class="txt-area-div">
+
+    <textarea class="textarea" formControlName="comment" placeholder="Share your thoughts" rows="4" cols="40">
+        
+    </textarea>
+</div>
+
+<!-- <input type="text" class="textarea" matInput formControlName="comment" placeholder="Share your opinion"> -->
+<!-- <div *ngIf="ratingFor.get('comment').hasError('required')">
+    comment is required.
+</div> -->
+<!-- <div *ngIf="ratingFor.errors?.['required']">
+    Name must be at least 4 characters long.
+</div> -->
+<mat-dialog-actions>
+
+    <div *ngIf="star!=0;" style="color: beige; display: flex;
+justify-content: center;">
+
+  <mat-icon class="s-button" (click)="star=0">delete_outline</mat-icon>
+  <!-- <button (click)="star=0">Clear</button> -->
+</div>
+
+
+    
+    <button mat-raised-button mat-dialog-close class="s-button">Cancel</button>
+   
+      <button class="s-button" >
+        Submit
+        <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+          <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+        </svg>
+      </button>
+    
+    </mat-dialog-actions>
+</form>
+</div>
